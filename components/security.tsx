@@ -3,12 +3,9 @@
 import { useRef, useEffect, useState } from 'react'
 
 const securityMechanisms = [
-  'Logic Flaw Prevention',
-  'Signature Verification',
-  'Overflow/Underflow Guards',
-  'Reentrancy Detection',
-  'State Machine Validation',
-  'Determinism Enforcement',
+  'BCH-1 Hackcelerator winner',
+  'Intent-to-Contract Protocol',
+  'Deterministic CashScript for Bitcoin Cash',
 ]
 
 const verificationSteps = [
@@ -50,7 +47,7 @@ export default function Security() {
                     }`}
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <span className="text-xs text-secondary font-bold">✓</span>
+                  <span className="text-[10px] font-mono text-secondary font-bold uppercase tracking-tighter bg-secondary/10 px-1.5 py-0.5 rounded border border-secondary/20 whitespace-nowrap">Built for BCH</span>
                   <span className="text-xs font-mono text-white/90">{item}</span>
                 </div>
               ))}
