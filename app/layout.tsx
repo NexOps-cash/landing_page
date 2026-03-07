@@ -8,16 +8,11 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'NexOps Protocol - Secure Smart Contract Generation',
-  description: 'Security-first protocol that converts developer intent into audited, deterministic CashScript contracts for Bitcoin Cash.',
-  generator: 'v0.app',
+  title: 'NexOps – Deterministic Contract Infrastructure for Bitcoin Cash',
+  description: 'A security-first platform for creating and distributing audited CashScript contracts on Bitcoin Cash.',
   icons: {
-    icon: [
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
+    icon: '/logo.jpeg',
+    apple: '/logo.jpeg',
   },
 }
 
