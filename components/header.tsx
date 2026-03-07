@@ -36,21 +36,25 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-8">
           <Link href="#protocol" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Protocol</Link>
           <Link href="#security" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Security</Link>
-          <Link href="https://docs.hexecutioners.club" target="_blank" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Documentation</Link>
+          <Link href="https://docs.nexops.cash" target="_blank" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Documentation</Link>
         </nav>
 
         {/* Actions */}
         <div className="flex items-center gap-4">
           <Link
-            href="https://github.com/nexopsbch/nexops"
+            href="https://github.com/NexOps-cash"
             target="_blank"
             className="hidden sm:inline-flex px-4 py-1.5 rounded-lg border border-primary/30 text-foreground text-sm font-medium hover:border-primary/60 hover:bg-primary/5 transition-all duration-200"
           >
             GitHub
           </Link>
-          <button className="px-4 py-1.5 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-all duration-200 shadow-[0_0_15px_rgba(0,229,255,0.3)]">
-            Get Started
-          </button>
+          <Link
+            href="https://app.nexops.cash"
+            target="_blank"
+            className="px-4 py-1.5 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-all duration-200 shadow-[0_0_15px_rgba(0,229,255,0.3)]"
+          >
+            Launch App
+          </Link>
         </div>
       </div>
     </header>

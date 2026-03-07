@@ -15,6 +15,7 @@ const products = [
         secondaryIcon: <Zap className="w-3 h-3 text-secondary" />,
         icon: <LayoutGrid className="w-5 h-5 text-primary" />,
         image: '/registry.png',
+        link: 'https://hub.nexops.cash'
     },
     {
         title: 'NexWizard',
@@ -26,6 +27,7 @@ const products = [
         secondaryIcon: <Hammer className="w-3 h-3 text-secondary" />,
         icon: <Wand2 className="w-5 h-5 text-primary" />,
         image: '/wizard.png',
+        link: 'https://wiz.nexops.cash'
     }
 ]
 
@@ -71,9 +73,13 @@ export default function FeaturedProducts() {
 
                         {/* Footer */}
                         <div className="p-6 pt-4 mt-auto flex items-center justify-between">
-                            <button className="px-6 py-2 rounded-lg bg-white text-black text-sm font-bold hover:bg-white/90 transition-colors">
+                            <Link
+                                href={product.link}
+                                target="_blank"
+                                className="px-6 py-2 rounded-lg bg-white text-black text-sm font-bold hover:bg-white/90 transition-colors inline-block"
+                            >
                                 {product.primaryAction}
-                            </button>
+                            </Link>
                             <div className="flex items-center gap-1.5 opacity-60">
                                 {product.secondaryIcon}
                                 <span className="text-[10px] font-bold text-white tracking-widest uppercase">

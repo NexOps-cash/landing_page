@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
 
 export default function AwardBanner() {
@@ -45,10 +46,14 @@ export default function AwardBanner() {
 
                     {/* Footer */}
                     <div className="p-8 pt-0 w-full flex flex-col items-center gap-6">
-                        <button className="w-full px-8 py-4 rounded-xl bg-white text-black font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center justify-center gap-3">
+                        <Link
+                            href="https://x.com/bch_1_official/status/2029927755270529102?s=20"
+                            target="_blank"
+                            className="w-full px-8 py-4 rounded-xl bg-white text-black font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center justify-center gap-3"
+                        >
                             View Announcement
                             <ExternalLink className="w-4 h-4" />
-                        </button>
+                        </Link>
                         <div className="flex items-center gap-2 opacity-90">
                             <span className="text-[11px] font-bold text-primary tracking-[0.3em] uppercase">
                                 🏆 ECOSYSTEM RECOGNITION

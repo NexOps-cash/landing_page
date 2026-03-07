@@ -40,12 +40,12 @@ export default function Footer() {
             <h4 className="text-sm font-mono text-primary mb-4 uppercase tracking-widest">Docs</h4>
             <ul className="space-y-2 text-sm text-foreground/60 hover:text-foreground/80 transition-colors">
               <li>
-                <Link href="https://docs.hexecutioners.club" target="_blank" className="hover:text-primary transition-colors">
+                <Link href="https://docs.nexops.cash" target="_blank" className="hover:text-primary transition-colors">
                   Documentation
                 </Link>
               </li>
               <li>
-                <Link href="https://github.com/nexopsbch/nexops" target="_blank" className="hover:text-primary transition-colors">
+                <Link href="https://github.com/NexOps-cash" target="_blank" className="hover:text-primary transition-colors">
                   API Reference
                 </Link>
               </li>
@@ -62,18 +62,18 @@ export default function Footer() {
             <h4 className="text-sm font-mono text-primary mb-4 uppercase tracking-widest">Connect</h4>
             <ul className="space-y-2 text-sm text-foreground/60 hover:text-foreground/80 transition-colors">
               <li>
-                <Link href="https://twitter.com/nexopsbch" target="_blank" className="hover:text-primary transition-colors">
+                <Link href="https://x.com/nexopsbch" target="_blank" className="hover:text-primary transition-colors">
                   Twitter
                 </Link>
               </li>
               <li>
-                <Link href="https://github.com/nexopsbch" target="_blank" className="hover:text-primary transition-colors">
+                <Link href="https://github.com/NexOps-cash" target="_blank" className="hover:text-primary transition-colors">
                   GitHub
                 </Link>
               </li>
               <li>
-                <Link href="https://www.hexecutioners.club" target="_blank" className="hover:text-primary transition-colors">
-                  Website
+                <Link href="https://app.nexops.cash" target="_blank" className="hover:text-primary transition-colors">
+                  Launch App
                 </Link>
               </li>
             </ul>
@@ -85,10 +85,10 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-foreground/50">
             <p className="font-mono">© 2025 NexOps Protocol. Security-first smart contracts for Bitcoin Cash.</p>
             <div className="flex gap-4">
-              <Link href="https://github.com/nexopsbch/nexops" target="_blank" className="hover:text-foreground/70 transition-colors">
+              <Link href="https://github.com/NexOps-cash" target="_blank" className="hover:text-foreground/70 transition-colors">
                 GitHub
               </Link>
-              <Link href="https://docs.hexecutioners.club" target="_blank" className="hover:text-foreground/70 transition-colors">
+              <Link href="https://docs.nexops.cash" target="_blank" className="hover:text-foreground/70 transition-colors">
                 Docs
               </Link>
             </div>
