@@ -34,8 +34,9 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="#protocol" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Protocol</Link>
-          <Link href="#security" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Security</Link>
+          <Link href="https://docs.nexops.cash/docs/intent-spec" target="_blank" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Protocol</Link>
+          <Link href="https://docs.nexops.cash/docs/security-model" target="_blank" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Security</Link>
+          <Link href="https://github.com/NexOps-cash/NexKB" target="_blank" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Knowledge Base</Link>
           <Link href="https://docs.nexops.cash" target="_blank" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Documentation</Link>
         </nav>
 

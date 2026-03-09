@@ -4,35 +4,13 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-primary/10 bg-black/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
             <h3 className="text-lg font-bold text-white mb-2">NexOps Protocol</h3>
             <p className="text-sm text-foreground/60 font-light">
               Security-first smart contract generation and deterministic deployment for Bitcoin Cash.
             </p>
-          </div>
-
-          {/* Links */}
-          <div>
-            <h4 className="text-sm font-mono text-primary mb-4 uppercase tracking-widest">Product</h4>
-            <ul className="space-y-2 text-sm text-foreground/60 hover:text-foreground/80 transition-colors">
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Security
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Pricing
-                </Link>
-              </li>
-            </ul>
           </div>
 
           {/* Documentation */}
@@ -45,12 +23,27 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://github.com/NexOps-cash" target="_blank" className="hover:text-primary transition-colors">
+                <Link href="https://github.com/NexOps-cash/NexKB" target="_blank" className="hover:text-primary transition-colors">
+                  Knowledge Base
+                </Link>
+              </li>
+              <li>
+                <Link href="https://docs.nexops.cash/docs/intent-spec" target="_blank" className="hover:text-primary transition-colors">
+                  Protocol Specification
+                </Link>
+              </li>
+              <li>
+                <Link href="https://docs.nexops.cash/docs/security-model" target="_blank" className="hover:text-primary transition-colors">
+                  Security Model
+                </Link>
+              </li>
+              <li>
+                <Link href="https://docs.nexops.cash/docs/intent-schema" target="_blank" className="hover:text-primary transition-colors">
                   API Reference
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-primary transition-colors">
+                <Link href="https://docs.nexops.cash/docs/ex-escrow" target="_blank" className="hover:text-primary transition-colors">
                   Examples
                 </Link>
               </li>

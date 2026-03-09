@@ -5,11 +5,12 @@ import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
 
 export default function AwardBanner() {
+    return null; /* Temporarily commented out as requested */
+    /*
     return (
         <section className="relative py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto flex flex-col items-center">
                 <div className="glass rounded-3xl overflow-hidden flex flex-col items-center border border-primary/20 shadow-[0_0_50px_rgba(0,229,255,0.15)] transition-all duration-500 hover:border-primary/40 group max-w-md w-full">
-                    {/* Header */}
                     <div className="p-8 pb-4 text-center w-full">
                         <div className="flex flex-col items-center gap-3">
                             <div className="flex items-center gap-2 flex-wrap justify-center">
@@ -23,28 +24,12 @@ export default function AwardBanner() {
                         </div>
                     </div>
 
-                    {/* 1:1 Achievement Poster */}
-                    <div className="px-8 pb-4 w-full">
-                        <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/5 bg-black/60 shadow-inner group-hover:border-primary/20 transition-all duration-700">
-                            <Image
-                                src="/poster.jpeg"
-                                alt="BCH-1 Hackcelerator Award Poster"
-                                fill
-                                className="object-contain p-4"
-                                style={{ filter: "drop-shadow(0 0 20px rgba(0, 229, 255, 0.2))" }}
-                                priority
-                            />
-                        </div>
-                    </div>
-
-                    {/* Body Content */}
                     <div className="px-10 pb-6 text-center">
                         <p className="text-sm text-white/70 leading-relaxed font-medium">
-                            Recognized as the #1 project in the BCH-1 Hackcelerator, NexOps was selected from 255 builders and 53 global projects for its protocol-level approach to deterministic smart contract generation and automated security verification.
+                            Recognized as the #1 project in the BCH-1 Hackcelerator for its protocol-level approach to deterministic smart contract generation and automated security verification.
                         </p>
                     </div>
 
-                    {/* Footer */}
                     <div className="p-8 pt-0 w-full flex flex-col items-center gap-6">
                         <Link
                             href="https://x.com/bch_1_official/status/2029927755270529102?s=20"
@@ -64,4 +49,5 @@ export default function AwardBanner() {
             </div>
         </section>
     )
+    */
 }

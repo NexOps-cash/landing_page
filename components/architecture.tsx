@@ -24,7 +24,7 @@ export default function Architecture() {
   }, [])
 
   return (
-    <section ref={containerRef} className="relative py-12 px-4 sm:px-6 lg:px-8 border-t border-primary/10">
+    <section id="protocol" ref={containerRef} className="relative py-12 px-4 sm:px-6 lg:px-8 border-t border-primary/10">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold mb-12 text-foreground">Protocol Pipeline</h2>
 

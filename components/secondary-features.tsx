@@ -7,22 +7,14 @@ const features = [
     {
         title: 'ABI Visualizer',
         badge: 'DEBUGGER',
-        url: 'abi.nexops.cash',
         description: 'Transform raw contract artifacts into intuitive, human-readable interfaces. Instantly visualize constructors, function signatures, and data types to understand the exact interaction surface of your compiled CashScript covenants.',
-        primaryAction: 'Inspect Artifacts',
-        secondaryInfo: 'ARTIFACT ANALYZER',
-        secondaryIcon: <Search className="w-3 h-3 text-secondary" />,
         icon: <Eye className="w-5 h-5 text-primary" />,
         image: '/abivisual.png',
     },
     {
         title: 'Flow Palette',
         badge: 'MECHANISM',
-        url: 'flow.nexops.cash',
         description: 'Trace the logical execution path of your intents using interactive tree diagrams. Deconstruct complex validation steps into visual nodes, identify potential bottlenecks, and calculate real-time contract complexity indexes.',
-        primaryAction: 'View Logic Graph',
-        secondaryInfo: 'EXECUTION TRACER',
-        secondaryIcon: <Share2 className="w-3 h-3 text-secondary" />,
         icon: <Share2 className="w-5 h-5 text-primary" />,
         image: '/flowpalette.png',
     }
@@ -47,7 +39,6 @@ export default function SecondaryFeatures() {
                                             {feature.badge}
                                         </span>
                                     </div>
-                                    <p className="text-xs font-mono text-white/40">{feature.url}</p>
                                 </div>
                             </div>
                             <p className="text-sm text-white/70 leading-relaxed min-h-[4rem]">
@@ -68,18 +59,6 @@ export default function SecondaryFeatures() {
                             </div>
                         </div>
 
-                        {/* Footer */}
-                        <div className="p-6 pt-4 mt-auto flex items-center justify-between">
-                            <button className="px-6 py-2 rounded-lg bg-white text-black text-sm font-bold hover:bg-white/90 transition-colors">
-                                {feature.primaryAction}
-                            </button>
-                            <div className="flex items-center gap-1.5 opacity-60">
-                                {feature.secondaryIcon}
-                                <span className="text-[10px] font-bold text-white tracking-widest uppercase">
-                                    {feature.secondaryInfo}
-                                </span>
-                            </div>
-                        </div>
                     </div>
                 ))}
             </div>
