@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { LayoutGrid, Wand2, Zap, Hammer } from 'lucide-react'
-import { track } from '@vercel/analytics'
+import { usePostHog } from 'posthog-js/react'
 
 const products = [
     {
@@ -33,6 +33,7 @@ const products = [
 ]
 
 export default function FeaturedProducts() {
+    const posthog = usePostHog()
     return (
         <section className="relative py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -77,7 +78,7 @@ export default function FeaturedProducts() {
                             <Link
                                 href={product.link}
                                 target="_blank"
-                                onClick={() => track(`click_product_${product.title.toLowerCase().replace(' ', '_')}`)}
+                                onClick={() => posthog.capture(`click_product_${product.title.toLowerCase().replace(' ', '_')}`)}
                                 className="px-6 py-2 rounded-lg bg-white text-black text-sm font-bold hover:bg-white/90 transition-colors inline-block"
                             >
                                 {product.primaryAction}

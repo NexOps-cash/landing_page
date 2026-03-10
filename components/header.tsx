@@ -3,9 +3,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { track } from '@vercel/analytics'
+import { usePostHog } from 'posthog-js/react'
 
 export default function Header() {
+  const posthog = usePostHog()
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function Header() {
         {/* Logo */}
         <Link 
           href="/" 
-          onClick={() => track('click_home_logo')}
+          onClick={() => posthog.capture('click_home_logo')}
           className="flex items-center gap-2 group"
         >
           <div className="relative w-9 h-9 overflow-hidden rounded-xl border border-primary/20 group-hover:border-primary/60 transition-all duration-300 shadow-[0_0_15px_rgba(0,229,255,0.1)]">
@@ -42,7 +43,7 @@ export default function Header() {
           <Link 
             href="https://docs.nexops.cash/docs/intent-spec" 
             target="_blank" 
-            onClick={() => track('click_protocol_header')}
+            onClick={() => posthog.capture('click_protocol_header')}
             className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors"
           >
             Protocol
@@ -50,7 +51,7 @@ export default function Header() {
           <Link 
             href="https://docs.nexops.cash/docs/security-model" 
             target="_blank" 
-            onClick={() => track('click_security_header')}
+            onClick={() => posthog.capture('click_security_header')}
             className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors"
           >
             Security
@@ -58,7 +59,7 @@ export default function Header() {
           <Link 
             href="https://github.com/NexOps-cash/NexKB" 
             target="_blank" 
-            onClick={() => track('click_kb_header')}
+            onClick={() => posthog.capture('click_kb_header')}
             className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors"
           >
             Knowledge Base
@@ -66,7 +67,7 @@ export default function Header() {
           <Link 
             href="https://docs.nexops.cash" 
             target="_blank" 
-            onClick={() => track('click_docs_header')}
+            onClick={() => posthog.capture('click_docs_header')}
             className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors"
           >
             Documentation
@@ -78,7 +79,7 @@ export default function Header() {
           <Link
             href="https://github.com/NexOps-cash"
             target="_blank"
-            onClick={() => track('click_github_header')}
+            onClick={() => posthog.capture('click_github_header')}
             className="hidden sm:inline-flex px-4 py-1.5 rounded-lg border border-primary/30 text-foreground text-sm font-medium hover:border-primary/60 hover:bg-primary/5 transition-all duration-200"
           >
             GitHub
@@ -86,7 +87,7 @@ export default function Header() {
           <Link
             href="https://app.nexops.cash"
             target="_blank"
-            onClick={() => track('launch_app_header')}
+            onClick={() => posthog.capture('launch_app_header')}
             className="px-4 py-1.5 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-all duration-200 shadow-[0_0_15px_rgba(0,229,255,0.3)]"
           >
             Launch App

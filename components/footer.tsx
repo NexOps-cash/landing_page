@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { track } from '@vercel/analytics'
+import { usePostHog } from 'posthog-js/react'
 
 export default function Footer() {
+  const posthog = usePostHog()
   return (
     <footer className="relative border-t border-primary/10 bg-black/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -22,7 +23,7 @@ export default function Footer() {
                 <Link 
                   href="https://docs.nexops.cash" 
                   target="_blank" 
-                  onClick={() => track('click_docs_footer')}
+                  onClick={() => posthog.capture('click_docs_footer')}
                   className="hover:text-primary transition-colors"
                 >
                   Documentation
@@ -32,7 +33,7 @@ export default function Footer() {
                 <Link 
                   href="https://github.com/NexOps-cash/NexKB" 
                   target="_blank" 
-                  onClick={() => track('click_kb_footer')}
+                  onClick={() => posthog.capture('click_kb_footer')}
                   className="hover:text-primary transition-colors"
                 >
                   Knowledge Base
@@ -42,7 +43,7 @@ export default function Footer() {
                 <Link 
                   href="https://docs.nexops.cash/docs/intent-spec" 
                   target="_blank" 
-                  onClick={() => track('click_protocol_footer')}
+                  onClick={() => posthog.capture('click_protocol_footer')}
                   className="hover:text-primary transition-colors"
                 >
                   Protocol Specification
@@ -52,7 +53,7 @@ export default function Footer() {
                 <Link 
                   href="https://docs.nexops.cash/docs/security-model" 
                   target="_blank" 
-                  onClick={() => track('click_security_footer')}
+                  onClick={() => posthog.capture('click_security_footer')}
                   className="hover:text-primary transition-colors"
                 >
                   Security Model
@@ -62,7 +63,7 @@ export default function Footer() {
                 <Link 
                   href="https://docs.nexops.cash/docs/intent-schema" 
                   target="_blank" 
-                  onClick={() => track('click_api_ref_footer')}
+                  onClick={() => posthog.capture('click_api_ref_footer')}
                   className="hover:text-primary transition-colors"
                 >
                   API Reference
@@ -72,7 +73,7 @@ export default function Footer() {
                 <Link 
                   href="https://docs.nexops.cash/docs/ex-escrow" 
                   target="_blank" 
-                  onClick={() => track('click_examples_footer')}
+                  onClick={() => posthog.capture('click_examples_footer')}
                   className="hover:text-primary transition-colors"
                 >
                   Examples
@@ -89,7 +90,7 @@ export default function Footer() {
                 <Link 
                   href="https://x.com/nexopsbch" 
                   target="_blank" 
-                  onClick={() => track('click_twitter_footer')}
+                  onClick={() => posthog.capture('click_twitter_footer')}
                   className="hover:text-primary transition-colors"
                 >
                   Twitter
@@ -99,7 +100,7 @@ export default function Footer() {
                 <Link 
                   href="https://github.com/NexOps-cash" 
                   target="_blank" 
-                  onClick={() => track('click_github_footer')}
+                  onClick={() => posthog.capture('click_github_footer')}
                   className="hover:text-primary transition-colors"
                 >
                   GitHub
@@ -109,7 +110,7 @@ export default function Footer() {
                 <Link 
                   href="https://app.nexops.cash" 
                   target="_blank" 
-                  onClick={() => track('launch_app_footer')}
+                  onClick={() => posthog.capture('launch_app_footer')}
                   className="hover:text-primary transition-colors"
                 >
                   Launch App
