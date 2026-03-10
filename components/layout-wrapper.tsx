@@ -2,11 +2,13 @@
 
 import GreenBackground from './green-background'
 import Header from './header'
+import { ServiceWaker } from './service-waker'
 import { ReactNode } from 'react'
 
 export function LayoutWrapper({ children }: { children: ReactNode }) {
   return (
     <>
+      <ServiceWaker />
       <div className="fixed inset-0 z-0 pointer-events-none">
         <GreenBackground />
       </div>
