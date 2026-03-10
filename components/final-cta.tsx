@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useRef, useEffect, useState } from 'react'
+import { track } from '@vercel/analytics'
 
 export default function FinalCTA() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -37,15 +38,17 @@ export default function FinalCTA() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="https://github.com/nexopsbch/nexops"
+              href="https://github.com/NexOps-cash"
               target="_blank"
+              onClick={() => track('click_github_final_cta')}
               className="px-6 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-all duration-200 border border-primary/50"
             >
               GitHub Repository
             </Link>
             <Link
-              href="https://docs.hexecutioners.club"
+              href="https://docs.nexops.cash"
               target="_blank"
+              onClick={() => track('click_docs_final_cta')}
               className="px-6 py-2 rounded-lg border border-primary/30 text-foreground text-sm font-medium hover:border-primary/60 hover:bg-primary/5 transition-all duration-200"
             >
               Documentation

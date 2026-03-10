@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useRef, useEffect, useState } from 'react'
+import { track } from '@vercel/analytics'
 
 export default function DeveloperEcosystem() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -34,16 +35,18 @@ export default function DeveloperEcosystem() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="https://github.com/nexopsbch/nexops"
+              href="https://github.com/NexOps-cash"
               target="_blank"
+              onClick={() => track('click_github_ecosystem')}
               className="px-6 py-3 rounded-lg glass border border-primary/50 text-foreground hover:border-primary hover:bg-primary/10 transition-all duration-200 font-medium flex items-center justify-center gap-2"
             >
               <span>→</span>
               GitHub
             </Link>
             <Link
-              href="https://docs.hexecutioners.club"
+              href="https://docs.nexops.cash"
               target="_blank"
+              onClick={() => track('click_docs_ecosystem')}
               className="px-6 py-3 rounded-lg glass border border-secondary/50 text-foreground hover:border-secondary hover:bg-secondary/10 transition-all duration-200 font-medium flex items-center justify-center gap-2"
             >
               <span>→</span>

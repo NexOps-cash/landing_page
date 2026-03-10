@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { track } from '@vercel/analytics'
 
 export default function Footer() {
   return (
@@ -18,32 +19,62 @@ export default function Footer() {
             <h4 className="text-sm font-mono text-primary mb-4 uppercase tracking-widest">Docs</h4>
             <ul className="space-y-2 text-sm text-foreground/60 hover:text-foreground/80 transition-colors">
               <li>
-                <Link href="https://docs.nexops.cash" target="_blank" className="hover:text-primary transition-colors">
+                <Link 
+                  href="https://docs.nexops.cash" 
+                  target="_blank" 
+                  onClick={() => track('click_docs_footer')}
+                  className="hover:text-primary transition-colors"
+                >
                   Documentation
                 </Link>
               </li>
               <li>
-                <Link href="https://github.com/NexOps-cash/NexKB" target="_blank" className="hover:text-primary transition-colors">
+                <Link 
+                  href="https://github.com/NexOps-cash/NexKB" 
+                  target="_blank" 
+                  onClick={() => track('click_kb_footer')}
+                  className="hover:text-primary transition-colors"
+                >
                   Knowledge Base
                 </Link>
               </li>
               <li>
-                <Link href="https://docs.nexops.cash/docs/intent-spec" target="_blank" className="hover:text-primary transition-colors">
+                <Link 
+                  href="https://docs.nexops.cash/docs/intent-spec" 
+                  target="_blank" 
+                  onClick={() => track('click_protocol_footer')}
+                  className="hover:text-primary transition-colors"
+                >
                   Protocol Specification
                 </Link>
               </li>
               <li>
-                <Link href="https://docs.nexops.cash/docs/security-model" target="_blank" className="hover:text-primary transition-colors">
+                <Link 
+                  href="https://docs.nexops.cash/docs/security-model" 
+                  target="_blank" 
+                  onClick={() => track('click_security_footer')}
+                  className="hover:text-primary transition-colors"
+                >
                   Security Model
                 </Link>
               </li>
               <li>
-                <Link href="https://docs.nexops.cash/docs/intent-schema" target="_blank" className="hover:text-primary transition-colors">
+                <Link 
+                  href="https://docs.nexops.cash/docs/intent-schema" 
+                  target="_blank" 
+                  onClick={() => track('click_api_ref_footer')}
+                  className="hover:text-primary transition-colors"
+                >
                   API Reference
                 </Link>
               </li>
               <li>
-                <Link href="https://docs.nexops.cash/docs/ex-escrow" target="_blank" className="hover:text-primary transition-colors">
+                <Link 
+                  href="https://docs.nexops.cash/docs/ex-escrow" 
+                  target="_blank" 
+                  onClick={() => track('click_examples_footer')}
+                  className="hover:text-primary transition-colors"
+                >
                   Examples
                 </Link>
               </li>
@@ -55,17 +86,32 @@ export default function Footer() {
             <h4 className="text-sm font-mono text-primary mb-4 uppercase tracking-widest">Connect</h4>
             <ul className="space-y-2 text-sm text-foreground/60 hover:text-foreground/80 transition-colors">
               <li>
-                <Link href="https://x.com/nexopsbch" target="_blank" className="hover:text-primary transition-colors">
+                <Link 
+                  href="https://x.com/nexopsbch" 
+                  target="_blank" 
+                  onClick={() => track('click_twitter_footer')}
+                  className="hover:text-primary transition-colors"
+                >
                   Twitter
                 </Link>
               </li>
               <li>
-                <Link href="https://github.com/NexOps-cash" target="_blank" className="hover:text-primary transition-colors">
+                <Link 
+                  href="https://github.com/NexOps-cash" 
+                  target="_blank" 
+                  onClick={() => track('click_github_footer')}
+                  className="hover:text-primary transition-colors"
+                >
                   GitHub
                 </Link>
               </li>
               <li>
-                <Link href="https://app.nexops.cash" target="_blank" className="hover:text-primary transition-colors">
+                <Link 
+                  href="https://app.nexops.cash" 
+                  target="_blank" 
+                  onClick={() => track('launch_app_footer')}
+                  className="hover:text-primary transition-colors"
+                >
                   Launch App
                 </Link>
               </li>

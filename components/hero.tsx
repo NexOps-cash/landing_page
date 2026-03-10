@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { track } from '@vercel/analytics'
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -50,6 +51,7 @@ export default function Hero() {
           <Link
             href="https://app.nexops.cash"
             target="_blank"
+            onClick={() => track('launch_app_hero')}
             className="px-8 py-4 rounded-xl bg-white text-black text-sm font-bold hover:bg-white/90 transition-all duration-200 shadow-[0_0_30px_rgba(255,255,255,0.2)] uppercase tracking-widest min-w-[200px] text-center"
           >
             Launch App
@@ -57,6 +59,7 @@ export default function Hero() {
           <Link
             href="https://docs.nexops.cash"
             target="_blank"
+            onClick={() => track('read_docs_hero')}
             className="px-8 py-4 rounded-xl border border-white/10 text-white/80 text-sm font-bold hover:border-primary/40 hover:text-white hover:bg-primary/5 transition-all duration-200 backdrop-blur-sm min-w-[200px] text-center"
           >
             Read Docs

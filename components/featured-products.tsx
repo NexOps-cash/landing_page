@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { LayoutGrid, Wand2, Zap, Hammer } from 'lucide-react'
+import { track } from '@vercel/analytics'
 
 const products = [
     {
@@ -76,6 +77,7 @@ export default function FeaturedProducts() {
                             <Link
                                 href={product.link}
                                 target="_blank"
+                                onClick={() => track(`click_product_${product.title.toLowerCase().replace(' ', '_')}`)}
                                 className="px-6 py-2 rounded-lg bg-white text-black text-sm font-bold hover:bg-white/90 transition-colors inline-block"
                             >
                                 {product.primaryAction}

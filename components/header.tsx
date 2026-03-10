@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { track } from '@vercel/analytics'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -20,7 +21,11 @@ export default function Header() {
       }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link 
+          href="/" 
+          onClick={() => track('click_home_logo')}
+          className="flex items-center gap-2 group"
+        >
           <div className="relative w-9 h-9 overflow-hidden rounded-xl border border-primary/20 group-hover:border-primary/60 transition-all duration-300 shadow-[0_0_15px_rgba(0,229,255,0.1)]">
             <Image
               src="/logo.jpeg"
@@ -34,10 +39,38 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="https://docs.nexops.cash/docs/intent-spec" target="_blank" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Protocol</Link>
-          <Link href="https://docs.nexops.cash/docs/security-model" target="_blank" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Security</Link>
-          <Link href="https://github.com/NexOps-cash/NexKB" target="_blank" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Knowledge Base</Link>
-          <Link href="https://docs.nexops.cash" target="_blank" className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors">Documentation</Link>
+          <Link 
+            href="https://docs.nexops.cash/docs/intent-spec" 
+            target="_blank" 
+            onClick={() => track('click_protocol_header')}
+            className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors"
+          >
+            Protocol
+          </Link>
+          <Link 
+            href="https://docs.nexops.cash/docs/security-model" 
+            target="_blank" 
+            onClick={() => track('click_security_header')}
+            className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors"
+          >
+            Security
+          </Link>
+          <Link 
+            href="https://github.com/NexOps-cash/NexKB" 
+            target="_blank" 
+            onClick={() => track('click_kb_header')}
+            className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors"
+          >
+            Knowledge Base
+          </Link>
+          <Link 
+            href="https://docs.nexops.cash" 
+            target="_blank" 
+            onClick={() => track('click_docs_header')}
+            className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors"
+          >
+            Documentation
+          </Link>
         </nav>
 
         {/* Actions */}
@@ -45,6 +78,7 @@ export default function Header() {
           <Link
             href="https://github.com/NexOps-cash"
             target="_blank"
+            onClick={() => track('click_github_header')}
             className="hidden sm:inline-flex px-4 py-1.5 rounded-lg border border-primary/30 text-foreground text-sm font-medium hover:border-primary/60 hover:bg-primary/5 transition-all duration-200"
           >
             GitHub
@@ -52,6 +86,7 @@ export default function Header() {
           <Link
             href="https://app.nexops.cash"
             target="_blank"
+            onClick={() => track('launch_app_header')}
             className="px-4 py-1.5 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-all duration-200 shadow-[0_0_15px_rgba(0,229,255,0.3)]"
           >
             Launch App
