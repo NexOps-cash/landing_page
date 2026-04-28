@@ -1,13 +1,17 @@
 'use client'
 
+import Link from 'next/link'
+
 const recognitionQuotes = [
   {
     quote: 'Nobody else has anything like this.',
     source: 'BCH-1 Hackcelerator',
+    link: 'https://x.com/bch_1_official/status/2027400211946176832?s=20',
   },
   {
     quote: 'A powerful protocol for building, auditing, and compiling CashScript contracts.',
     source: 'Bitcoin Cash',
+    link: 'https://x.com/BitcoinCashOG/status/2015039431246270526?s=20',
   },
 ]
 
@@ -24,7 +28,14 @@ export default function EcosystemProof() {
           {recognitionQuotes.map((item, i) => (
             <blockquote key={i} className="glass rounded-xl border border-primary/20 p-5">
               <p className="text-white/90 text-base leading-relaxed mb-3">"{item.quote}"</p>
-              <footer className="text-xs font-mono text-primary uppercase tracking-[0.22em]">- {item.source}</footer>
+              <footer className="text-xs font-mono text-primary uppercase tracking-[0.22em] mb-4">- {item.source}</footer>
+              <Link
+                href={item.link}
+                target="_blank"
+                className="inline-flex items-center px-4 py-2 rounded-lg border border-primary/30 text-primary text-xs font-mono uppercase tracking-[0.16em] hover:bg-primary/10 transition-all"
+              >
+                View Post
+              </Link>
             </blockquote>
           ))}
         </div>
@@ -35,7 +46,14 @@ export default function EcosystemProof() {
             <p className="text-white/90 text-base leading-relaxed mb-3">
               "The audit flagged a subtle multisig edge case and suggested an automatic fix."
             </p>
-            <footer className="text-xs font-mono text-secondary uppercase tracking-[0.22em]">- Milestara Team</footer>
+            <footer className="text-xs font-mono text-secondary uppercase tracking-[0.22em] mb-4">- Milestara Team</footer>
+            <Link
+              href="https://x.com/jovan_0406/status/2029497825483264051?s=20"
+              target="_blank"
+              className="inline-flex items-center px-4 py-2 rounded-lg border border-secondary/30 text-secondary text-xs font-mono uppercase tracking-[0.16em] hover:bg-secondary/10 transition-all"
+            >
+              View Post
+            </Link>
           </blockquote>
 
           <blockquote className="glass rounded-xl border border-primary/20 p-5">
@@ -43,7 +61,14 @@ export default function EcosystemProof() {
             <p className="text-white/90 text-base leading-relaxed mb-3">
               "A one-stop platform for on-chain contract auditing?"
             </p>
-            <footer className="text-xs font-mono text-primary uppercase tracking-[0.22em]">- Bitcoin Cash Taiwan</footer>
+            <footer className="text-xs font-mono text-primary uppercase tracking-[0.22em] mb-4">- Bitcoin Cash Taiwan</footer>
+            <Link
+              href="https://x.com/twbitcoincash/status/2048866667292488024?s=20"
+              target="_blank"
+              className="inline-flex items-center px-4 py-2 rounded-lg border border-primary/30 text-primary text-xs font-mono uppercase tracking-[0.16em] hover:bg-primary/10 transition-all"
+            >
+              View Post
+            </Link>
           </blockquote>
         </div>
 
@@ -52,7 +77,15 @@ export default function EcosystemProof() {
           <p className="text-white/85 text-base mb-3">
             "The world is not quite ready for when developer tooling matures..."
           </p>
-          <p className="text-xs font-mono text-white/70 uppercase tracking-[0.22em] mb-4">- BCH-1 Hackcelerator</p>
+          <p className="text-xs font-mono text-white/70 uppercase tracking-[0.22em] mb-2">- BCH-1 Hackcelerator</p>
+          <p className="text-white/60 text-xs mb-4">Shared as a quote-retweet on NexOps.</p>
+          <Link
+            href="https://x.com/bch_1_official/status/2042681066725741040?s=20"
+            target="_blank"
+            className="inline-flex items-center px-4 py-2 rounded-lg border border-white/20 text-white/85 text-xs font-mono uppercase tracking-[0.16em] hover:bg-white/5 transition-all mb-4"
+          >
+            View Post
+          </Link>
           <p className="text-secondary text-sm sm:text-base font-semibold">
             NexOps is built for that shift. Builders already see NexOps as a unified contract pipeline.
           </p>

@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 const failureDrivers = [
   'complex value flows',
   'edge-case execution paths',
@@ -31,6 +33,13 @@ export default function RealWorldFailure() {
           <p className="text-secondary text-sm font-mono mt-5">
             This is exactly what NexOps is built to prevent.
           </p>
+          <Link
+            href="https://x.com/MoriaMoney/status/2047435265409716734?s=20"
+            target="_blank"
+            className="inline-flex items-center mt-4 px-4 py-2 rounded-lg border border-primary/30 text-primary text-xs font-mono uppercase tracking-[0.16em] hover:bg-primary/10 transition-all"
+          >
+            View Post
+          </Link>
         </div>
       </div>
     </section>
