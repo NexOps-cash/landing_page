@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from 'react'
 
 const steps = [
-  { label: 'Intent\nSpecification', short: 'Intent' },
-  { label: 'NexIR\nGeneration', short: 'NexIR' },
-  { label: 'Logic\nInjection', short: 'Logic' },
-  { label: 'TollGate\nAudit', short: 'Verify' },
-  { label: 'Deterministic\nDeployment', short: 'Deploy' },
+  { label: 'Intent', short: 'Intent' },
+  { label: 'NexIR', short: 'NexIR' },
+  { label: 'Compile', short: 'Compile' },
+  { label: 'TollGate', short: 'TollGate' },
+  { label: 'Deploy', short: 'Deploy' },
 ]
 
 export default function Architecture() {
@@ -26,7 +26,10 @@ export default function Architecture() {
   return (
     <section id="protocol" ref={containerRef} className="relative py-12 px-4 sm:px-6 lg:px-8 border-t border-primary/10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold mb-12 text-foreground">Protocol Pipeline</h2>
+        <h2 className="text-2xl font-bold mb-2 text-foreground">Protocol Pipeline</h2>
+        <p className="text-sm text-white/65 mb-10 font-mono">
+          Intent -&gt; NexIR -&gt; Compile -&gt; TollGate -&gt; Deploy. Each step enforces correctness before the next begins.
+        </p>
 
         {/* Desktop horizontal flow */}
         <div className="hidden md:block">
