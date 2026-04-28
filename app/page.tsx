@@ -7,6 +7,7 @@ import Problem from '@/components/problem'
 import RealWorldFailure from '@/components/real-world-failure'
 import WhyNexOps from '@/components/why-nexops'
 import Solution from '@/components/solution'
+import WhyBitcoinCash from '@/components/why-bitcoin-cash'
 import WorkbenchPreview from '@/components/workbench-preview'
 import FeaturedProducts from '@/components/featured-products'
 import Architecture from '@/components/architecture'
@@ -23,13 +24,14 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <WorkbenchPreview />
       <StackComparison />
       <AwardBanner />
       <Problem />
       <RealWorldFailure />
       <WhyNexOps />
       <Solution />
-      <WorkbenchPreview />
+      <WhyBitcoinCash />
       <FeaturedProducts />
       <Architecture />
       <CodeExamples />

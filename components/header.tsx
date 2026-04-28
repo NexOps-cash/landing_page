@@ -32,7 +32,7 @@ export default function Header() {
               src="/logo.jpeg"
               alt="NexOps Logo"
               fill
-              className="object-cover group-hover:scale-110 transition-transform duration-500"
+              className="object-cover brightness-110 contrast-[1.02] group-hover:scale-110 transition-transform duration-500"
             />
           </div>
           <span className="text-lg font-bold tracking-tight text-white group-hover:text-primary transition-colors">NexOps</span>

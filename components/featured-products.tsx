@@ -68,7 +68,7 @@ export default function FeaturedProducts() {
                                     src={product.image}
                                     alt={product.title}
                                     fill
-                                    className="object-contain opacity-80 group-hover:opacity-100 transition-all duration-300"
+                                    className="object-contain opacity-90 group-hover:opacity-100 brightness-125 contrast-[1.02] transition-all duration-300"
                                 />
                             </div>
                         </div>

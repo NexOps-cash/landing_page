@@ -5,7 +5,7 @@ export default function TrustBanner() {
         <div className="glass rounded-lg p-8 text-center">
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="text-2xl">🥇</span>
-            <span className="text-xs font-mono text-primary uppercase tracking-widest">Recognition</span>
+            <span className="text-sm font-mono font-bold text-primary uppercase tracking-[0.2em]">Recognition</span>
           </div>
           <h3 className="text-2xl font-bold mb-2 text-white">Overall Winner — BCH-1 Hackcelerator</h3>
           <p className="text-foreground/60">

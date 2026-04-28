@@ -14,7 +14,9 @@ export default function RealWorldFailure() {
       <div className="max-w-5xl mx-auto">
         <div className="glass rounded-2xl border border-primary/20 p-6 sm:p-8 shadow-[0_0_30px_rgba(0,229,255,0.1)]">
           <div className="inline-flex items-center gap-2 mb-4">
-            <span className="text-[10px] font-mono text-primary uppercase tracking-[0.28em]">Real-World Failure</span>
+            <span className="text-sm font-mono font-bold text-primary uppercase tracking-[0.2em] drop-shadow-[0_0_10px_rgba(0,229,255,0.2)]">
+              Real-World Failure
+            </span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Even well-designed contracts can fail due to subtle logic flaws.
@@ -38,7 +40,7 @@ export default function RealWorldFailure() {
             target="_blank"
             className="inline-flex items-center mt-4 px-4 py-2 rounded-lg border border-primary/30 text-primary text-xs font-mono uppercase tracking-[0.16em] hover:bg-primary/10 transition-all"
           >
-            View Post
+            View What Happened
           </Link>
         </div>
       </div>

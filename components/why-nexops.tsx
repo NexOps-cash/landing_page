@@ -5,7 +5,9 @@ export default function WhyNexOps() {
     <section className="relative py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="glass rounded-2xl border border-secondary/20 p-6 sm:p-8">
-          <p className="text-xs font-mono text-secondary uppercase tracking-[0.28em] mb-3">Why NexOps</p>
+          <p className="text-sm sm:text-base font-mono font-bold text-secondary uppercase tracking-[0.22em] mb-3 drop-shadow-[0_0_12px_rgba(10,193,142,0.2)]">
+            Why NexOps
+          </p>
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Most tools audit contracts after they are written.
           </h3>

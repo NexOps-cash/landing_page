@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Code, ArrowRight } from 'lucide-react'
+import workbenchImage from '@/assets/workbench.png'
 
 export default function WorkbenchPreview() {
     return (
@@ -9,13 +9,11 @@ export default function WorkbenchPreview() {
             <div className="max-w-6xl mx-auto flex flex-col items-center">
                 {/* Large IDE Preview */}
                 <div className="w-full relative group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-transparent to-primary/20 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
+                    <div className="absolute -inset-1 bg-gradient-to-r from-primary/15 via-transparent to-primary/15 rounded-2xl blur-xl opacity-10 group-hover:opacity-15 transition-opacity" />
                     <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#0a0a0a] shadow-2xl">
                         <Image
-                            src="/workbench.png"
+                            src={workbenchImage}
                             alt="NexOps Workbench IDE"
-                            width={1920}
-                            height={1080}
                             className="w-full h-auto object-cover"
                             priority
                         />

@@ -24,8 +24,10 @@ export default function Hero() {
         {/* Trust Badge - BCH-1 Hackcelerator */}
         <div className={`flex justify-center mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-secondary/40 bg-secondary/10 shadow-[0_0_20px_rgba(10,193,142,0.2)]">
-            <span className="text-[10px] font-mono text-secondary font-bold uppercase tracking-tighter">Built for BCH</span>
-            <span className="text-xs font-mono text-foreground tracking-widest uppercase">BCH-1 Hackcelerator winner</span>
+            <span className="text-xs sm:text-sm font-mono text-secondary font-bold uppercase tracking-[0.12em]">Built for BCH</span>
+            <span className="text-xs sm:text-sm font-mono text-foreground font-semibold tracking-[0.18em] uppercase">
+              BCH-1 Hackcelerator winner
+            </span>
           </div>
         </div>
 

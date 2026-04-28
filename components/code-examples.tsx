@@ -1,20 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-
 export default function CodeExamples() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.1 }
-    )
-    if (containerRef.current) observer.observe(containerRef.current)
-    return () => observer.disconnect()
-  }, [])
-
   const codeBlocks = [
     {
       title: 'Developer Intent',
@@ -69,7 +55,7 @@ Ready for deployment`
   ]
 
   return (
-    <section ref={containerRef} className="relative py-12 px-4 sm:px-6 lg:px-8 border-t border-primary/10">
+    <section className="relative py-12 px-4 sm:px-6 lg:px-8 border-t border-primary/10">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold mb-8 text-foreground">Intent-to-Deployment Flow</h2>
 
@@ -77,9 +63,7 @@ Ready for deployment`
           {codeBlocks.map((block, i) => (
             <div
               key={i}
-              className={`glass rounded-lg border border-primary/30 overflow-hidden transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-                }`}
-              style={{ transitionDelay: `${i * 150}ms` }}
+              className="glass rounded-lg border border-primary/30 overflow-hidden"
             >
               {/* Header */}
               <div className="px-4 py-3 border-b border-primary/20 bg-primary/5">
@@ -97,8 +81,7 @@ Ready for deployment`
         </div>
 
         {/* Footer info */}
-        <div className={`mt-8 px-4 py-3 rounded-lg border border-primary/20 bg-primary/5 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'
-          }`} style={{ transitionDelay: '450ms' }}>
+        <div className="mt-8 px-4 py-3 rounded-lg border border-primary/20 bg-primary/5">
           <p className="text-xs text-foreground/70 font-mono">
             <span className="text-secondary">→</span> Each intent is compiled to deterministic bytecode, verified by TollGate, and deployed to BCH network
           </p>
