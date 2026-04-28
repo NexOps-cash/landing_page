@@ -29,23 +29,20 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Main Headline - Compact */}
+        {/* Main Headline */}
         <div className={`text-center mb-6 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <h1 className="text-5xl sm:text-[5rem] font-extrabold tracking-tight text-white mb-6 drop-shadow-2xl leading-[1.1]">
-            Deterministic Contract <br /> Infrastructure for Bitcoin Cash
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 drop-shadow-2xl leading-[1.1]">
+            The developer platform for Bitcoin Cash smart contracts.
           </h1>
-          <p className="text-xl font-mono text-primary tracking-[0.3em] font-bold uppercase drop-shadow-[0_0_10px_rgba(0,229,255,0.4)] mb-8">
-            Build. Verify. Publish. Securely.
+          <p className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-4 font-medium">
+            NexOps combines an AI contract IDE, built-in auditing, deterministic deployment, and a registry of verified templates - all in one system.
           </p>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto mb-4 font-medium italic">
-            A security-first platform for creating and distributing audited CashScript contracts.
+          <p className="text-sm sm:text-base font-mono text-primary tracking-[0.12em] font-bold uppercase drop-shadow-[0_0_10px_rgba(0,229,255,0.4)] mb-3">
+            Generate -&gt; Verify -&gt; Deploy secure contracts without manual workflows.
           </p>
         </div>
 
-        {/* Description - Mission Statement */}
-        <p className={`text-center text-white/60 mb-10 max-w-2xl mx-auto text-sm leading-relaxed transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          NexOps converts developer intent into audited, deterministic smart contracts through automated security verification and protocol-level compliance.
-        </p>
+        <div className="mb-10" />
 
         {/* CTA Buttons - Inline */}
         <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
