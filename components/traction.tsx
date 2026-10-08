@@ -1,32 +1,24 @@
-'use client'
-
-const tractionItems = [
-  '900+ internal contract generation and audit runs',
-  'Active usage across BCH contract flows from emerging BCH projects such as Fun(d)Tokens and Milestara',
-  'Continuous iteration from real-world audits and feedback',
+const metrics = [
+  { value: '20+', label: 'Developers', detail: 'Using generation and auditing' },
+  { value: '120+', label: 'Contracts generated', detail: 'Through compile-gated generation' },
+  { value: '12+', label: 'Contracts audited', detail: 'Including the $MINTY contracts' },
+  { value: '50+', label: 'Contracts deployed', detail: 'With the NexOps deployment system' },
 ]
 
 export default function Traction() {
   return (
-    <section className="relative py-12 px-4 sm:px-6 lg:px-8 border-t border-primary/10">
+    <section aria-label="NexOps usage" className="px-4 sm:px-6 lg:px-8 pb-12">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-8">
-          <p className="text-sm sm:text-base font-mono font-bold text-secondary uppercase tracking-[0.22em] mb-3 drop-shadow-[0_0_12px_rgba(10,193,142,0.2)]">
-            Traction
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">Usage momentum from real contract workflows</h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {tractionItems.map((item, i) => (
-            <div key={i} className="glass rounded-xl p-5 border border-secondary/20 hover:border-secondary/40 transition-all duration-300">
-              <p className="text-xs sm:text-sm font-mono font-semibold text-secondary uppercase tracking-[0.18em] mb-2">
-                Signal {String(i + 1).padStart(2, '0')}
-              </p>
-              <p className="text-white/90 text-sm sm:text-base leading-relaxed">{item}</p>
+        <dl className="grid grid-cols-2 md:grid-cols-4 gap-6 border-y border-white/10 py-7">
+          {metrics.map(({ value, label, detail }) => (
+            <div key={label}>
+              <dt className="text-sm text-white/75">{label}</dt>
+              <dd className="text-3xl sm:text-4xl font-semibold text-white mt-2">{value}</dd>
+              <dd className="text-xs text-white/55 mt-2">{detail}</dd>
             </div>
           ))}
-        </div>
+        </dl>
+        <p className="mt-3 text-xs text-white/50">Cumulative figures reported by NexOps · October 2026</p>
       </div>
     </section>
   )

@@ -39,7 +39,8 @@ export default function Header() {
         </Link>
 
         {/* Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-6">
+          <Link href="#ecosystem-proof" className="text-sm font-medium text-primary hover:text-white">Team proof</Link>
           <Link 
             href="https://docs.nexops.cash/docs/intent-spec" 
             target="_blank" 

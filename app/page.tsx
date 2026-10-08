@@ -17,13 +17,17 @@ import SecondaryFeatures from '@/components/secondary-features'
 import Security from '@/components/security'
 import ProtocolTrace from '@/components/protocol-trace'
 import EcosystemProof from '@/components/ecosystem-proof'
+import EcosystemRecognition from '@/components/ecosystem-recognition'
 import Traction from '@/components/traction'
 import Footer from '@/components/footer'
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
+      <EcosystemProof />
+      <Traction />
+      <EcosystemRecognition />
       <WorkbenchPreview />
       <StackComparison />
       <AwardBanner />
@@ -38,10 +42,8 @@ export default function Home() {
       <Features />
       <SecondaryFeatures />
       <Security />
-      <EcosystemProof />
-      <Traction />
       <ProtocolTrace />
       <Footer />
-    </main>
+    </>
   )
 }

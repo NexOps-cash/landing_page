@@ -1,115 +1,66 @@
-'use client'
-
-import Link from 'next/link'
-
-const recognitionQuotes = [
+const teams = [
   {
-    quote: 'Nobody else has anything like this.',
-    source: 'BCH-1 Hackcelerator',
-    link: 'https://x.com/bch_1_official/status/2027400211946176832?s=20',
+    name: 'Cashmint Labs', category: 'Bonding curve contracts · $MINTY',
+    summary: 'Cashmint announced that it received NexOps’ audit review ahead of its agent token launch.',
+    quote: 'We received the official audit review from NexOps',
+    source: 'Cashmint Labs · September 13, 2026',
+    href: 'https://x.com/CashMintLabs/status/2099149902009995741', linkLabel: 'Read the team’s post',
+    evidenceHref: 'https://app.cauldron.quest/swap/7cb1787c32ad10ffc21bbf543c4514984e1f6593f7a0f9b9487af51a824fc37a',
+    outcome: '~$7k in $MINTY TVL', detail: 'Reported by NexOps · October 8, 2026 snapshot',
   },
   {
-    quote: 'A powerful protocol for building, auditing, and compiling CashScript contracts.',
-    source: 'Bitcoin Cash',
-    link: 'https://x.com/BitcoinCashOG/status/2015039431246270526?s=20',
+    name: 'Fun(d)Tokens', category: 'Basket index protocol',
+    summary: 'The team publicly credited NexOps for helping complete the first audit of its basket index protocol.',
+    quote: 'helping complete the first audit of our basket index protocol, FundTokens.',
+    source: 'Fun(d)Tokens · May 5, 2026',
+    href: 'https://x.com/FundTokens_Cash/status/2051378880955445283', linkLabel: 'Read the team’s post',
+    outcome: 'First protocol audit completed', detail: 'Acknowledged publicly by the team',
+  },
+  {
+    name: 'Milestara', category: 'Smart contract auditing',
+    summary: 'Milestara shared a concrete finding from its audit: a subtle edge case in multisig logic, with a suggested fix.',
+    quote: 'The audit flagged a subtle multisig edge case and suggested an automatic fix.',
+    source: 'Milestara team',
+    href: 'https://x.com/jovan_0406/status/2029497825483264051', linkLabel: 'Read the team’s post',
+    outcome: 'Multisig edge case identified', detail: 'Actionable feedback on contract logic',
   },
 ]
 
 export default function EcosystemProof() {
   return (
-    <section className="relative py-12 px-4 sm:px-6 lg:px-8 border-t border-primary/10">
+    <section id="ecosystem-proof" aria-labelledby="proof-title" className="relative scroll-mt-24 py-10 px-4 sm:px-6 lg:px-8 border-t border-primary/15">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-8">
-          <p className="text-sm sm:text-base font-mono font-bold text-primary uppercase tracking-[0.22em] mb-3 drop-shadow-[0_0_12px_rgba(0,229,255,0.25)]">
-            Proof from the Ecosystem
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">Validation from builders and ecosystem voices</h2>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-7">
+          <div>
+            <p className="text-xs font-mono text-secondary uppercase tracking-[0.2em] mb-3">Beyond the demo</p>
+            <h2 id="proof-title" className="text-3xl sm:text-4xl font-bold text-white">3 external teams. Real audit work.</h2>
+          </div>
+          <p className="text-sm text-white/60 sm:max-w-xs">From bonding curves to basket indices: see what teams used NexOps for.</p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          {recognitionQuotes.map((item, i) => (
-            <blockquote key={i} className="glass rounded-xl border border-primary/20 p-5">
-              <p className="text-white/90 text-base leading-relaxed mb-3">"{item.quote}"</p>
-              <footer className="text-xs font-mono text-primary uppercase tracking-[0.22em] mb-4">- {item.source}</footer>
-              <Link
-                href={item.link}
-                target="_blank"
-                className="inline-flex items-center px-4 py-2 rounded-lg border border-primary/30 text-primary text-xs font-mono uppercase tracking-[0.16em] hover:bg-primary/10 transition-all"
-              >
-                View Post
-              </Link>
-            </blockquote>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {teams.map((team) => (
+            <article key={team.name} className="flex flex-col rounded-2xl border border-white/15 bg-black/50 p-6">
+              <p className="text-xs text-secondary mb-3">{team.category}</p>
+              <h3 className="text-xl font-semibold text-white">{team.name}</h3>
+              <p className="text-sm leading-relaxed text-white/70 mt-3">{team.summary}</p>
+              <blockquote className="border-l-2 border-primary/50 pl-4 my-6">
+                <p className="text-sm leading-relaxed text-white/90">“{team.quote}”</p>
+                <footer className="text-xs text-white/55 mt-3">{team.source}</footer>
+              </blockquote>
+              <div className="mt-auto">
+                <div className="border-t border-white/10 pt-4 mb-5">
+                  <p className="font-medium text-secondary">{team.outcome}</p>
+                  <p className="text-xs text-white/55 mt-1">{team.detail}</p>
+                  {team.evidenceHref && <a href={team.evidenceHref} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-sm text-primary hover:text-white">View $MINTY on Cauldron ↗</a>}
+                </div>
+                <a href={team.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-primary hover:text-white">{team.linkLabel} <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
           ))}
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <blockquote className="glass rounded-xl border border-secondary/20 p-5">
-            <p className="text-sm font-mono font-bold text-secondary uppercase tracking-[0.2em] mb-2">Real Impact</p>
-            <p className="text-white/90 text-base leading-relaxed mb-3">
-              "The audit flagged a subtle multisig edge case and suggested an automatic fix."
-            </p>
-            <footer className="text-xs font-mono text-secondary uppercase tracking-[0.22em] mb-4">- Milestara Team</footer>
-            <Link
-              href="https://x.com/jovan_0406/status/2029497825483264051?s=20"
-              target="_blank"
-              className="inline-flex items-center px-4 py-2 rounded-lg border border-secondary/30 text-secondary text-xs font-mono uppercase tracking-[0.16em] hover:bg-secondary/10 transition-all"
-            >
-              View Post
-            </Link>
-          </blockquote>
-
-          <blockquote className="glass rounded-xl border border-primary/20 p-5">
-            <p className="text-sm font-mono font-bold text-primary uppercase tracking-[0.2em] mb-2">Ecosystem Perception</p>
-            <p className="text-white/90 text-base leading-relaxed mb-3">
-              "A one-stop platform for on-chain contract auditing?"
-            </p>
-            <footer className="text-xs font-mono text-primary uppercase tracking-[0.22em] mb-4">- Bitcoin Cash Taiwan</footer>
-            <Link
-              href="https://x.com/twbitcoincash/status/2048866667292488024?s=20"
-              target="_blank"
-              className="inline-flex items-center px-4 py-2 rounded-lg border border-primary/30 text-primary text-xs font-mono uppercase tracking-[0.16em] hover:bg-primary/10 transition-all"
-            >
-              View Post
-            </Link>
-          </blockquote>
-        </div>
-
-        <div className="glass rounded-xl border border-white/10 p-5 sm:p-6">
-          <p className="text-sm font-mono font-bold text-white/80 uppercase tracking-[0.2em] mb-2">Market Timing</p>
-          <p className="text-white/85 text-base mb-3">
-            "The world is not quite ready for when developer tooling matures..."
-          </p>
-          <p className="text-xs font-mono text-white/70 uppercase tracking-[0.22em] mb-2">- BCH-1 Hackcelerator</p>
-          <p className="text-white/60 text-xs mb-4">Shared as a quote-retweet on NexOps.</p>
-          <Link
-            href="https://x.com/bch_1_official/status/2042681066725741040?s=20"
-            target="_blank"
-            className="inline-flex items-center px-4 py-2 rounded-lg border border-white/20 text-white/85 text-xs font-mono uppercase tracking-[0.16em] hover:bg-white/5 transition-all mb-4"
-          >
-            View Post
-          </Link>
-          <p className="text-secondary text-sm sm:text-base font-semibold">
-            NexOps is built for that shift. Builders already see NexOps as a unified contract pipeline.
-          </p>
-        </div>
-
-        <div className="glass rounded-xl border border-primary/20 p-5 sm:p-6 mt-4">
-          <p className="text-sm font-mono font-bold text-primary uppercase tracking-[0.2em] mb-2">
-            Backed by real-world recognition
-          </p>
-          <p className="text-white/90 text-base leading-relaxed mb-3">
-            "Showcasing exceptional innovation, technical brilliance, and forward-thinking blockchain development."
-          </p>
-          <p className="text-xs font-mono text-primary uppercase tracking-[0.22em] mb-4">
-            - Chennai Institute of Technology
-          </p>
-          <Link
-            href="https://www.linkedin.com/posts/teamcit-citians-globalachievement-share-7438188408197500929-AoMG?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFLCBcwB8OCifkEDtd7TsC0QSjnQWswXRsM"
-            target="_blank"
-            className="inline-flex items-center px-4 py-2 rounded-lg border border-primary/30 text-primary text-xs font-mono uppercase tracking-[0.16em] hover:bg-primary/10 transition-all"
-          >
-            View Post
-          </Link>
+        <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:items-center justify-between rounded-xl border border-secondary/20 bg-secondary/5 px-5 py-4">
+          <p className="text-sm text-white/80"><span className="font-semibold text-white">BCH-1 Hackcelerator winner</span> · $10,000 award</p>
+          <a href="https://x.com/bch_1_official/status/2029927755270529102" target="_blank" rel="noopener noreferrer" className="text-sm text-secondary hover:text-white">View announcement ↗</a>
         </div>
       </div>
     </section>

@@ -13,6 +13,7 @@ export default function Footer() {
             <p className="text-sm text-foreground/60 font-light">
               Security-first smart contract generation and deterministic deployment for Bitcoin Cash.
             </p>
+            <p className="mt-4 text-sm text-white/60">Founded and built by <a href="https://nishanth.vip" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Nishanth B</a></p>
           </div>
 
           {/* Documentation */}
@@ -123,7 +124,7 @@ export default function Footer() {
         {/* Bottom section */}
         <div className="border-t border-primary/10 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-foreground/50">
-            <p className="font-mono">© 2025 NexOps Protocol. Security-first smart contracts for Bitcoin Cash.</p>
+            <p className="font-mono">© 2026 NexOps Protocol. Security-first smart contracts for Bitcoin Cash.</p>
             <div className="flex gap-4">
               <Link href="https://github.com/NexOps-cash" target="_blank" className="hover:text-foreground/70 transition-colors">
                 GitHub

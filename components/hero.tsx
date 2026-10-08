@@ -13,7 +13,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <div className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background Grid Texture */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
         style={{ backgroundImage: 'radial-gradient(circle, #00E5FF 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
@@ -34,13 +34,14 @@ export default function Hero() {
         {/* Main Headline */}
         <div className={`text-center mb-6 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 drop-shadow-2xl leading-[1.1]">
-            The developer platform for Bitcoin Cash smart contracts.
+            AI builds the contract.
+            Verification comes next.
           </h1>
           <p className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-4 font-medium">
-            NexOps combines an AI contract IDE, built-in auditing, deterministic deployment, and a registry of verified templates - all in one system.
+            Generate, audit, and deploy Bitcoin Cash smart contracts in one platform. Built around compile checks, security analysis, and targeted repair.
           </p>
           <p className="text-sm sm:text-base font-mono text-primary tracking-[0.12em] font-bold uppercase drop-shadow-[0_0_10px_rgba(0,229,255,0.4)] mb-3">
-            Generate -&gt; Verify -&gt; Deploy secure contracts without manual workflows.
+            Used by 3 external teams and 20+ developers.
           </p>
         </div>
 
@@ -57,14 +58,14 @@ export default function Hero() {
             Launch App
           </Link>
           <Link
-            href="https://docs.nexops.cash"
-            target="_blank"
-            onClick={() => posthog.capture('read_docs_hero')}
+            href="#ecosystem-proof"
+            onClick={() => posthog.capture('view_team_proof_hero')}
             className="px-8 py-4 rounded-xl border border-white/10 text-white/80 text-sm font-bold hover:border-primary/40 hover:text-white hover:bg-primary/5 transition-all duration-200 backdrop-blur-sm min-w-[200px] text-center"
           >
-            Read Docs
+            See the team proof
           </Link>
         </div>
+        <p className="mt-6 text-center text-sm text-white/60">Built by <a href="https://nishanth.vip" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-4 hover:text-primary">Nishanth B</a></p>
       </div>
     </div>
   )
